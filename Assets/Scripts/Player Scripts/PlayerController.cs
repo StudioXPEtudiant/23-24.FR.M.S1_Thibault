@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private PlayerMotor motor;
+    
     // Start is called before the first frame update
     void Start()
     {
