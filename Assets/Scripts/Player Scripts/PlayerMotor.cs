@@ -58,6 +58,5 @@ public class PlayerMotor : MonoBehaviour
     public void CheckIfGrounded()
     {
         isGrounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheck.GetComponent<CircleCollider2D>().radius, GroundLayer);
-        
     }
 }
