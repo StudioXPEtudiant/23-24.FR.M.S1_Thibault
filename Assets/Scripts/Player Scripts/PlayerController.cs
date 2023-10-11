@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private PlayerMotor motor;
+    private PlayerMotor motor;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (!motor)
+        {
+            motor = GetComponent<PlayerMotor>();
+        }
     }
 
     // Update is called once per frame
