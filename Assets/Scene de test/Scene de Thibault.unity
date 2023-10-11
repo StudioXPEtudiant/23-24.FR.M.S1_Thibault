@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 239089000}
   - component: {fileID: 239088999}
   - component: {fileID: 239088998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TerrainMilieu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,11 +352,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!95 &376726861 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5807551481354598689, guid: 38f050a1e232ca644bd6783f0250f086, type: 3}
-  m_PrefabInstance: {fileID: 1212021444}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &512212553
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +366,7 @@ GameObject:
   - component: {fileID: 512212557}
   - component: {fileID: 512212556}
   - component: {fileID: 512212555}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TerrainArriere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4667,7 +4662,7 @@ GameObject:
   - component: {fileID: 913790827}
   - component: {fileID: 913790826}
   - component: {fileID: 913790825}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TerrainAvant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6411,7 +6406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1044160008}
   - component: {fileID: 1044160007}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6459,14 +6454,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2573105931092022417, guid: 38f050a1e232ca644bd6783f0250f086, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 376726861}
-    - target: {fileID: 2573105931092022417, guid: 38f050a1e232ca644bd6783f0250f086, type: 3}
-      propertyPath: animatorMoveParameterName
-      value: Move Direction
-      objectReference: {fileID: 0}
     - target: {fileID: 3019827345514228885, guid: 38f050a1e232ca644bd6783f0250f086, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.0172575
@@ -6527,7 +6514,7 @@ GameObject:
   - component: {fileID: 1623072057}
   - component: {fileID: 1623072059}
   - component: {fileID: 1623072058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DecorationArrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6675,7 +6662,7 @@ GameObject:
   - component: {fileID: 1818306628}
   - component: {fileID: 1818306630}
   - component: {fileID: 1818306629}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DecorationAvant
   m_TagString: Untagged
   m_Icon: {fileID: 0}

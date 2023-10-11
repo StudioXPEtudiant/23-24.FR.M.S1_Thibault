@@ -157,7 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5546985a478e0d44973911283a43723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motor: {fileID: 2573105931092022417}
 --- !u!114 &2573105931092022417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,10 +169,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21015ba47045a1d4d9a853874828c60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorMoveParameterName: Move Direction
   GroundCheck: {fileID: 1223027514268333205}
   GroundLayer:
     serializedVersion: 2
     m_Bits: 128
+  animator: {fileID: 5807551481354598689}
 --- !u!114 &8099564129167090989
 MonoBehaviour:
   m_ObjectHideFlags: 0
