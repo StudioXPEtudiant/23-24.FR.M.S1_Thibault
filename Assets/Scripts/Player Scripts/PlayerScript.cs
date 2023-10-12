@@ -7,6 +7,9 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerController))]
 public class PlayerScript : MonoBehaviour
 {
+    [Header("Parameters Vars")] 
+    public bool onLadder = false;
+    
     [Header("Player Variable")]
     public float velocity = 10;
     public float jumpForce = 1;
@@ -15,6 +18,9 @@ public class PlayerScript : MonoBehaviour
     [Header("Behaviour")]
     [SerializeField] private PlayerController playercontroller;
     [SerializeField] private PlayerMotor playerMotor;
+
+    [Header("Component")] 
+    [SerializeField] private CapsuleCollider2D collider2D;
     
     // Start is called before the first frame update
     void Start()
@@ -27,11 +33,5 @@ public class PlayerScript : MonoBehaviour
         {
             playerMotor = GetComponent<PlayerMotor>();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
