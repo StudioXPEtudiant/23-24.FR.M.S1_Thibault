@@ -5,36 +5,80 @@ using UnityEngine;
 
 public class LadderScript : MonoBehaviour
 {
-    private CapsuleCollider2D collider2D;
     private PlayerScript playerScript;
 
+    private bool onLadder;
+
+    [Header("Animator System")]
+    [SerializeField] private string animatorClimbParameterName;
+    
+    [Header("Layer Name")]
     [SerializeField] private string ladderLayerName;
+    
+    [Header("Component")] 
+    [SerializeField] private CapsuleCollider2D capsuleCollider2D_Vertical;
+    [SerializeField] private CapsuleCollider2D capsuleCollider2D_Horizontal;
+    [SerializeField] private Animator animator;
+    [SerializeField] private PlayerMotor motor;
+    
+    [Header("Behaviours")]
+    [SerializeField] private PlayerScript player;
+    [SerializeField] private Rigidbody2D _rb2d;
+
 
     private void Start()
     {
-        // Init des components
         if (!playerScript)
         {
             playerScript = GetComponent<PlayerScript>();
         }
     }
 
-    // S'active quand le joueur rentre en colission avec un autre collider
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Verifi si le Layer est bien le {ladderLayerName}
         if (other.gameObject.layer == LayerMask.NameToLayer(ladderLayerName))
         {
-            playerScript.onLadder = true;
+            onLadder = true;
         }
     }
-    // S'active quand le joueur quitte la collision avec l'objet
+
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Desactive onLadder si le collider possedait le layer {ladderLayerName}
         if (other.gameObject.layer == LayerMask.NameToLayer(ladderLayerName))
         {
-            playerScript.onLadder = false;
+            onLadder = false;
+            animator.SetBool(animatorClimbParameterName, false);
+        }
+    }
+
+    private void Update()
+    {
+        if (onLadder)
+        {
+            if (motor.verticalInput != 0)
+            {
+                SwitchColliderDirection(true);
+                animator.SetBool(animatorClimbParameterName, true);
+                _rb2d.velocity = new Vector2(_rb2d.velocity.x, motor.verticalInput * player.climbSpeed);
+                Debug.Log("ClimbLadder method called");
+            } else if (motor.verticalInput == 0)
+            {
+                SwitchColliderDirection(false);
+            }
+        }
+    }
+    
+    public void SwitchColliderDirection(bool value)
+    {
+        if (value)
+        {
+            capsuleCollider2D_Vertical.enabled = true;
+            capsuleCollider2D_Horizontal.enabled = false;
+        }
+        else if (!value)
+        {
+            capsuleCollider2D_Horizontal.enabled = true;
+            capsuleCollider2D_Vertical.enabled = false;
         }
     }
 }
