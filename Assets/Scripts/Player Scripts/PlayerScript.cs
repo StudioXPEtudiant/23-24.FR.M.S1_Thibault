@@ -18,9 +18,6 @@ public class PlayerScript : MonoBehaviour
     [Header("Behaviour")]
     [SerializeField] private PlayerController playercontroller;
     [SerializeField] private PlayerMotor playerMotor;
-
-    [Header("Component")] 
-    [SerializeField] private CapsuleCollider2D collider2D;
     
     // Start is called before the first frame update
     void Start()

@@ -24,7 +24,8 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] Animator animator;
 
     [Header("Component")] 
-    [SerializeField] private CapsuleCollider2D capsuleCollider2D;
+    [SerializeField] private CapsuleCollider2D capsuleCollider2D_Vertical;
+    [SerializeField] private CapsuleCollider2D capsuleCollider2D_Horizontal;
 
     private void Start()
     {
@@ -46,42 +47,34 @@ public class PlayerMotor : MonoBehaviour
         // Envoie l'info de l'input du joueur a l'animator
         if (horizontalInput > 0)
         {
-            SetAnimation(animatorMoveParameterName, 1);
+            SetMoveAnimation(animatorMoveParameterName, 1);
         }
         if (horizontalInput < 0)
         {
-            SetAnimation(animatorMoveParameterName, -1);
+            SetMoveAnimation(animatorMoveParameterName, -1);
         }
         if (horizontalInput == 0)
         {
-            SetAnimation(animatorMoveParameterName, 0);
+            SetMoveAnimation(animatorMoveParameterName, 0);
         }
-
-        if (Input.GetKey(KeyCode.W))
+        
+        if (player.onLadder)
         {
-            if (player.onLadder)
+            if (Input.GetKey(KeyCode.W))
             {
                 ClimbLadder();
             }
             else
             {
-                if (_rb2d.gravityScale != 1)
-                {
-                    _rb2d.gravityScale = 1;
-                }
+                animator.SetBool(animatorClimbParameterName, false);
+                SwitchColliderDirection(false);
             }
-            
-        }
-        else
-        {
-            animator.SetBool(animatorClimbParameterName, false);
-            SwitchColliderDirection(false);
         }
         
         Jump();
     }
 
-    private void SetAnimation(string _animationName, int _direction)
+    private void SetMoveAnimation(string _animationName, int _direction)
     {
         // Change le parametre "Move Direction" pour faire changer la direction du joueur 
         animator.SetInteger(_animationName, _direction);
@@ -117,8 +110,6 @@ public class PlayerMotor : MonoBehaviour
     private void ClimbLadder()
     {
         SwitchColliderDirection(true);
-        
-        _rb2d.gravityScale = 0;
     
         _rb2d.velocity = new Vector2(_rb2d.velocity.x, verticalInput * player.climbSpeed);
         Debug.Log("Climp methode called");
@@ -130,18 +121,20 @@ public class PlayerMotor : MonoBehaviour
     {
         if (value)
         {
-            // Met le collider verticalement
-            capsuleCollider2D.direction = CapsuleDirection2D.Vertical;
-            capsuleCollider2D.offset = new Vector2((float)-0.0009462237, (float)-0.01945906);
-            capsuleCollider2D.size = new Vector2((float)0.3922933, (float)0.6083833);
+            // Active le collider vertical
+            capsuleCollider2D_Vertical.enabled = true;
+            
+            // Desactive le collider vertical
+            capsuleCollider2D_Horizontal.enabled = false;
         }
+        
         if (!value)
         {
-            // Met le collider horizontalement
-            capsuleCollider2D.direction = CapsuleDirection2D.Horizontal;
-            capsuleCollider2D.offset = new Vector2((float)-0.005013915, (float)-0.2533293);
-            capsuleCollider2D.size = new Vector2((float)0.8626499, (float)0.3910655);
-
+            // Active le collider horizontal
+            capsuleCollider2D_Horizontal.enabled = true;
+            
+            // Desactive le collider vertical
+            capsuleCollider2D_Vertical.enabled = false;
         }
     }
 }
