@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: de4817ef9c0373148aa798ee9d84f3d5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bug LadderAnim_36
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 384
+        width: 51
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f4c5a62626b854c9d8fb60d16e6f9d
+      internalID: 1385177491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bug LadderAnim_37
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 384
+        width: 45
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798cf59f8cd23994d983db16bead53c5
+      internalID: -111065287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bug LadderAnim_38
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 384
+        width: 45
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649dc1c1c2c02c740831d3f3b2a8bc20
+      internalID: -858607271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4280c3b698d66a84ba906084bee34c37
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Bug LadderAnim_0: 1418846995
+      Bug LadderAnim_1: -596918990
+      Bug LadderAnim_10: 1931903887
+      Bug LadderAnim_11: -991484099
+      Bug LadderAnim_12: -1570739120
+      Bug LadderAnim_13: -441771620
+      Bug LadderAnim_14: 1847709420
+      Bug LadderAnim_15: -37932069
+      Bug LadderAnim_16: 361765339
+      Bug LadderAnim_17: 1747771387
+      Bug LadderAnim_18: -1253238708
+      Bug LadderAnim_19: -356454100
+      Bug LadderAnim_2: -40460363
+      Bug LadderAnim_20: 190617695
+      Bug LadderAnim_21: -1910783282
+      Bug LadderAnim_22: -1843444000
+      Bug LadderAnim_23: -1120976325
+      Bug LadderAnim_24: 1415661371
+      Bug LadderAnim_25: -1250226068
+      Bug LadderAnim_26: 1091511285
+      Bug LadderAnim_27: -1711482335
+      Bug LadderAnim_28: -2110355495
+      Bug LadderAnim_29: 1499533769
+      Bug LadderAnim_3: 619883383
+      Bug LadderAnim_30: 679754950
+      Bug LadderAnim_31: 1334670744
+      Bug LadderAnim_32: 1968269451
+      Bug LadderAnim_33: 2091769624
+      Bug LadderAnim_34: 670451449
+      Bug LadderAnim_35: -1619293978
+      Bug LadderAnim_36: 1385177491
+      Bug LadderAnim_37: -111065287
+      Bug LadderAnim_38: -858607271
+      Bug LadderAnim_39: -698433856
+      Bug LadderAnim_4: 1168037290
+      Bug LadderAnim_40: 1985247504
+      Bug LadderAnim_41: 674749132
+      Bug LadderAnim_42: -672074225
+      Bug LadderAnim_43: 1088180574
+      Bug LadderAnim_44: 235122986
+      Bug LadderAnim_45: -891980461
+      Bug LadderAnim_46: 506285228
+      Bug LadderAnim_47: 1617380126
+      Bug LadderAnim_48: 386534332
+      Bug LadderAnim_5: -912563424
+      Bug LadderAnim_6: 1703974131
+      Bug LadderAnim_7: -53528278
+      Bug LadderAnim_8: 694553082
+      Bug LadderAnim_9: -361381376
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
