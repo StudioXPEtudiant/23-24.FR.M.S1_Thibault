@@ -35322,6 +35322,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player bug
       objectReference: {fileID: 0}
+    - target: {fileID: 8099564129167090989, guid: 38f050a1e232ca644bd6783f0250f086, type: 3}
+      propertyPath: jumpForce
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099564129167090989, guid: 38f050a1e232ca644bd6783f0250f086, type: 3}
+      propertyPath: climbSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
