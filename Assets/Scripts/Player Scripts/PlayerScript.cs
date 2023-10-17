@@ -6,8 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerController))]
 public class PlayerScript : MonoBehaviour
 {
-    public bool onLadder = false;
-    
     public float velocity = 10;
     public float jumpForce = 1;
     public float climbSpeed = 10;

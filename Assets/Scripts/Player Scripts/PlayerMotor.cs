@@ -8,6 +8,9 @@ public class PlayerMotor : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
     private bool isGrounded;
+    
+    public int currentJumpCount;
+    public int maxJump = 1;
 
     [Header("Animator System")] 
     [SerializeField] private string animatorMoveParameterName;
@@ -30,11 +33,12 @@ public class PlayerMotor : MonoBehaviour
         if (!player) {player = GetComponent<PlayerScript>();}
         
         if (!animator) {Debug.LogError("Animator of player missing");}
+
+        currentJumpCount = maxJump;
     }
     
     private void Update()
     {
-        
         // Stocke les inputs du joueur dans des variables
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
@@ -77,10 +81,27 @@ public class PlayerMotor : MonoBehaviour
     private void Jump()
     {
         bool isOnGround = Physics2D.OverlapCircle(GroundCheck.position, GroundCheck.GetComponent<CircleCollider2D>().radius, GroundLayer);
-    
+        
         if (isOnGround)
         {
             _rb2d.velocity = new Vector2(_rb2d.velocity.x, player.jumpForce);
+
+            currentJumpCount -= 1;
+            
+            currentJumpCount = maxJump;
         }
+        else if (!isOnGround && currentJumpCount >= 1)
+        {
+            _rb2d.velocity = new Vector2(_rb2d.velocity.x, player.jumpForce);
+            
+            currentJumpCount -= 1;
+        }
+    }
+
+    public void RefreshCurrentJumpCount()
+    {
+        currentJumpCount = maxJump;
+        
+        Debug.Log("CurrentJump Refreshing...");
     }
 }
