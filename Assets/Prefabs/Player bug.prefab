@@ -177,6 +177,7 @@ Transform:
   - {fileID: 7996051640367064167}
   - {fileID: 7194374897977679937}
   - {fileID: 1223027514268333205}
+  - {fileID: 5740372391237841029}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2922555816229175368
@@ -205,6 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalInput: 0
   horizontalInput: 0
+  currentJumpCount: 0
+  maxJump: 1
   animatorMoveParameterName: Move Direction
   GroundCheck: {fileID: 1223027514268333205}
   GroundLayer:
@@ -223,7 +226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff07b8f95d636d48948bb5d15e7d554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onLadder: 0
   velocity: 2
   jumpForce: 3
   climbSpeed: 1
@@ -440,7 +442,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3469649817394435935}
-  - {fileID: 5740372391237841029}
   m_Father: {fileID: 3019827345514228885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6752308475266432521
@@ -468,13 +469,13 @@ Transform:
   m_GameObject: {fileID: 6752308475266432521}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.12, z: 0}
+  m_LocalPosition: {x: 1.0192575, y: 1.3319447, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5096306552682365764}
   - {fileID: 7056641336335194445}
-  m_Father: {fileID: 7996051640367064167}
+  m_Father: {fileID: 3019827345514228885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6872930809644731491
 GameObject:
