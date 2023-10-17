@@ -21,8 +21,6 @@ public class PU_DoubleJumpPotion : MonoBehaviour
             GetInitialJumpCount();
 
             AddAdditionalJumpToPlayer();
-            
-            gameObject.SetActive(false);
         }
     }
     
@@ -34,7 +32,6 @@ public class PU_DoubleJumpPotion : MonoBehaviour
     private void AddAdditionalJumpToPlayer()
     {
         Debug.Log("AddAdditionalJumpToPLayer method called");
-
         
         playerMotor.maxJump += additionalJumpCount;
         
@@ -42,11 +39,11 @@ public class PU_DoubleJumpPotion : MonoBehaviour
         
         StartCoroutine(WaitBeforReset());
     }
-    IEnumerator WaitBeforReset()
+    private IEnumerator WaitBeforReset()
     {
         Debug.Log("WaitBeforReset()");
         
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(timeOfPowerUp);
         
         Debug.Log("wait finished");
         

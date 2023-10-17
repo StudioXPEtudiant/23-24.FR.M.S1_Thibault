@@ -13,7 +13,8 @@ public class PlayerMotor : MonoBehaviour
     public int maxJump = 1;
 
     [Header("Animator System")] 
-    [SerializeField] private string animatorMoveParameterName;
+    [SerializeField] private string animatorMoveHorizontalParameterName;
+    [SerializeField] private string animatorMoveVerticalParameterName;
     
     [Header("Ground System")]
     [SerializeField] private Transform GroundCheck;
@@ -43,19 +44,8 @@ public class PlayerMotor : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         
-        // Envoie l'info de l'input du joueur à l'animator
-        if (horizontalInput > 0)
-        {
-            SetMoveAnimation(animatorMoveParameterName, 1);
-        }
-        if (horizontalInput < 0)
-        {
-            SetMoveAnimation(animatorMoveParameterName, -1);
-        }
-        if (horizontalInput == 0)
-        {
-            SetMoveAnimation(animatorMoveParameterName, 0);
-        }
+        SetAnimationFloat(animatorMoveHorizontalParameterName, horizontalInput);
+        SetAnimationFloat(animatorMoveVerticalParameterName ,verticalInput);
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -63,9 +53,9 @@ public class PlayerMotor : MonoBehaviour
         }
     }
     
-    private void SetMoveAnimation(string _animationName, int _direction)
+    private void SetAnimationFloat(string _animationName, float _value)
     {
-        animator.SetInteger(_animationName, _direction);
+        animator.SetFloat(_animationName, _value);
     }
     
     private void FixedUpdate()

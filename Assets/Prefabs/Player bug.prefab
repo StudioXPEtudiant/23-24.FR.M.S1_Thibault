@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 2058401873400660010}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalInput: 0
   horizontalInput: 0
-  animatorMoveParameterName: Move Direction
+  currentJumpCount: 0
+  maxJump: 2
+  animatorMoveHorizontalParameterName: Move Direction Horizontal
+  animatorMoveVerticalParameterName: Move Direction Vertical
   GroundCheck: {fileID: 1223027514268333205}
   GroundLayer:
     serializedVersion: 2
@@ -223,7 +226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff07b8f95d636d48948bb5d15e7d554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onLadder: 0
   velocity: 2
   jumpForce: 3
   climbSpeed: 1
@@ -274,7 +276,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!1 &4628651033977013689
 GameObject:
@@ -355,7 +357,7 @@ GameObject:
   - component: {fileID: 2514145796370045739}
   m_Layer: 0
   m_Name: Collider Vertical
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -656,7 +658,7 @@ GameObject:
   - component: {fileID: 5095777264682804062}
   m_Layer: 0
   m_Name: Collider Horizontal
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
