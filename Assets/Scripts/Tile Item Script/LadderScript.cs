@@ -7,7 +7,7 @@ public class LadderScript : MonoBehaviour
 {
     private PlayerScript playerScript;
 
-    private bool onLadder;
+    public bool onLadder;
 
     [Header("Animator System")]
     [SerializeField] private string animatorClimbParameterName;

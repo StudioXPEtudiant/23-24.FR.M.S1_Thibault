@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
@@ -21,17 +22,27 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField] private LayerMask GroundLayer;
     
     [Header("Behaviours")]
-    private PlayerScript player;
-    private Rigidbody2D _rb2d;
-    [SerializeField] Animator animator;
+    [SerializeField] private PlayerScript player;
+    [SerializeField] private Rigidbody2D _rb2d;
+    [SerializeField] private Animator animator;
+    [SerializeField] private LadderScript ladderScript; 
 
     
 
     private void Start()
     {
+        InitAllVars();
+    }
+
+    private void InitAllVars()
+    {
         if (!_rb2d) {_rb2d = GetComponent<Rigidbody2D>();}
     
         if (!player) {player = GetComponent<PlayerScript>();}
+
+        if (!animator) {animator = GetComponent<Animator>();}
+        
+        if (!ladderScript) {ladderScript = GetComponent<LadderScript>();}
         
         if (!animator) {Debug.LogError("Animator of player missing");}
 
@@ -46,6 +57,11 @@ public class PlayerMotor : MonoBehaviour
         
         SetAnimationFloat(animatorMoveHorizontalParameterName, horizontalInput);
         SetAnimationFloat(animatorMoveVerticalParameterName ,verticalInput);
+
+        if (!ladderScript.onLadder)
+        {
+            SetAnimationFloat(animatorMoveVerticalParameterName ,0f);
+        }
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
