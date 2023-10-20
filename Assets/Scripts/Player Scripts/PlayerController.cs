@@ -1,23 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private PlayerMotor motor;
+    [Header("Behaviour")] 
+    [SerializeField] private PlayerUIScript playerUIScript;
     
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        if (!motor)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            motor = GetComponent<PlayerMotor>();
+            playerUIScript.ToggleEscapeMenu();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
