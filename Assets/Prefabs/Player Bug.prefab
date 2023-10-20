@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 7434821500423246236}
   - component: {fileID: 6385753280363119489}
   m_Layer: 0
-  m_Name: Playe
+  m_Name: Player Bug
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +157,10 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 128
+  player: {fileID: 6767798269241248053}
+  _rb2d: {fileID: 0}
   animator: {fileID: 2412559295750978106}
+  ladderScript: {fileID: 7434821500423246236}
 --- !u!114 &6767798269241248053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,8 +176,9 @@ MonoBehaviour:
   velocity: 2
   jumpForce: 3
   climbSpeed: 1
-  playerController: {fileID: 0}
+  playerController: {fileID: 2953368738845569753}
   playerMotor: {fileID: 4219617807476884216}
+  spriteRenderer: {fileID: 6804202080033318495}
 --- !u!114 &7434821500423246236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ef13b4db9bb634c8dc7536e14db957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onLadder: 0
   animatorClimbParameterName: Climbing
   ladderLayerName: Ladder
   capsuleCollider2D_Vertical: {fileID: 4339598764965608284}
