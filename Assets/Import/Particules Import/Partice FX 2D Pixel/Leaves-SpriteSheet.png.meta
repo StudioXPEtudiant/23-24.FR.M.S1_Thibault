@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -108,18 +108,370 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 562.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5c4a22d70a3354094a3ca054d087c3
+      internalID: 910308093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 562.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b681babe1886fa140b4afa0e67d326c4
+      internalID: -1007382376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 562.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29443bcae0585ff4e80d67f570073db4
+      internalID: -831620907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 562.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ea695d94696604c9974c14f394390c
+      internalID: 1682846544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 375.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20123deff642b264c8e4f877c5da2788
+      internalID: -411746811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 375.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feed9cebb84223041bc799d75efc1881
+      internalID: 1371583232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 375.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21760b7ac32b963459818337d7328cdf
+      internalID: -302994382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 375.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da01688ddce46140b60d49229b46227
+      internalID: 588363310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dadc14befcc4eb45a0431cc56146ab7
+      internalID: -1446295438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 188.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bafba0a0cd6046449a2c195a7fcc8e0
+      internalID: -181480528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 188.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f802d3f1c70c8e3448f08a5ec657090a
+      internalID: -1519688537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 188.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa6e070093a42f4689fa6124e64aa0a
+      internalID: 1884484604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf46de1a5b5af549b65b746cbc91f90
+      internalID: 1339908519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d296650b61d5904e96bca181f003905
+      internalID: 26526044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fabc97ee3dbecd14189a687352570ca6
+      internalID: -1305673192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves-SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1.5
+        width: 150
+        height: 187.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdc6bcf750a09441b483abdd35f4302
+      internalID: 2123439836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3827dfd3ce3f0ee49894d026e2a234d6
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Leaves-SpriteSheet_0: 910308093
+      Leaves-SpriteSheet_1: -1007382376
+      Leaves-SpriteSheet_10: -1519688537
+      Leaves-SpriteSheet_11: 1884484604
+      Leaves-SpriteSheet_12: 1339908519
+      Leaves-SpriteSheet_13: 26526044
+      Leaves-SpriteSheet_14: -1305673192
+      Leaves-SpriteSheet_15: 2123439836
+      Leaves-SpriteSheet_2: -831620907
+      Leaves-SpriteSheet_3: 1682846544
+      Leaves-SpriteSheet_4: -411746811
+      Leaves-SpriteSheet_5: 1371583232
+      Leaves-SpriteSheet_6: -302994382
+      Leaves-SpriteSheet_7: 588363310
+      Leaves-SpriteSheet_8: -1446295438
+      Leaves-SpriteSheet_9: -181480528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
