@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerUIScript : MonoBehaviour
 {
-    [Header("GameObject")] 
+    [Header("GameObjects")] 
     [SerializeField] private GameObject espaceMenu;
     
     public void ToggleEscapeMenu()

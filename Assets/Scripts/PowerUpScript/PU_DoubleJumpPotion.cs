@@ -10,7 +10,7 @@ public class PU_DoubleJumpPotion : MonoBehaviour
     private PlayerMotor playerMotor;
     private PlayerScript playerScript;
 
-    [Header("GameObject")] 
+    [Header("GameObjects")] 
     [SerializeField] private GameObject particles;
     
     [Header("PowerUp Parameters")] 

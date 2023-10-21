@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Behaviour")] 
+    [Header("Behaviours")] 
     [SerializeField] private PlayerUIScript playerUIScript;
     
     private void Update()

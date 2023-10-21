@@ -515,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ca9c27a55b59f45b83d86ca346dddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerUIScript: {fileID: 1088824543}
 --- !u!1 &426263577
 GameObject:
   m_ObjectHideFlags: 0
@@ -28591,9 +28592,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1088824543}
-        m_TargetAssemblyTypeName: PlayerUIScript, Assembly-CSharp
-        m_MethodName: ToggleEscapeMenu
+      - m_Target: {fileID: 248299920}
+        m_TargetAssemblyTypeName: EscapeMenuScript, Assembly-CSharp
+        m_MethodName: ToggleEspaceMenu_
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -39029,10 +39030,6 @@ PrefabInstance:
       propertyPath: playerUIScript
       value: 
       objectReference: {fileID: 1088824543}
-    - target: {fileID: 4219617807476884216, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
-      propertyPath: maxJump
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7689660235066492063, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.0172575
