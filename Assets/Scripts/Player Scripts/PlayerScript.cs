@@ -29,10 +29,12 @@ public class PlayerScript : MonoBehaviour
 
     public IEnumerator ChangeSpriteColor(Color _color, float _time)
     {
+        Color colorBeforeChange = spriteRenderer.color;
+        
         spriteRenderer.color = _color;
 
         yield return new WaitForSeconds(_time);
         
-        spriteRenderer.color = Color.white;
+        spriteRenderer.color = colorBeforeChange;
     }
 }
