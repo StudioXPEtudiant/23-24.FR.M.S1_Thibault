@@ -7,57 +7,26 @@ public class CursorManager : MonoBehaviour
     [Header("Cursors Textures")]
     public Texture2D normalCursor;
     public Texture2D onEnemyCursor;
-    public Texture2D onpnjCursor;
-
-    [Header("Camera settings")] [SerializeField]
-    private Camera mainCamera;
-
-    [Header("Tags")] 
-    [SerializeField] private string enemyTag;
-    [SerializeField] private string pnjTag;
-    private Camera _camera;
-
+    public Texture2D onPnjCursor;
+    
     private void Start()
     {
-        Cursor.SetCursor(normalCursor, Vector2.zero, CursorMode.Auto);
+        SetCursorDefault();
+    }
+
+    public void SetCursorRed()
+    {
+        Cursor.SetCursor(onEnemyCursor, new Vector2(onEnemyCursor.width / 2, onEnemyCursor.height / 2), CursorMode.Auto);
     }
     
-    private void Update()
+    public void SetCursorYellow()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Cursor.SetCursor(onEnemyCursor, Vector2.zero, CursorMode.Auto);
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Cursor.SetCursor(normalCursor, Vector2.zero, CursorMode.Auto);
-        }
-        
-        // Lancez un rayon depuis la position actuelle de la souris
-        if (mainCamera != null)
-        {
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                Debug.Log(hit.collider.tag);
-        
-                if (hit.collider.CompareTag(pnjTag))
-                {
-                    Cursor.SetCursor(onpnjCursor, Vector2.zero, CursorMode.Auto);
-                }
-        
-                else if (hit.collider.CompareTag(enemyTag))
-                {
-                    Cursor.SetCursor(onEnemyCursor, Vector2.zero, CursorMode.Auto);
-                }
-                else
-                {
-                    Cursor.SetCursor(normalCursor, Vector2.zero, CursorMode.Auto);
-                }
-            }
-        }
+        Cursor.SetCursor(onPnjCursor, new Vector2(onPnjCursor.width / 2, onPnjCursor.height / 2), CursorMode.Auto);
     }
+    
+    public void SetCursorDefault()
+    {
+        Cursor.SetCursor(normalCursor, new Vector2(normalCursor.width / 2, normalCursor.height / 2), CursorMode.Auto);
+    }
+    
 }
