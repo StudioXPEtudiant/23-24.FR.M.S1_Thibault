@@ -235,7 +235,7 @@ AnimatorController:
   - m_Name: Health Level
     m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 0
+    m_DefaultInt: 6
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
