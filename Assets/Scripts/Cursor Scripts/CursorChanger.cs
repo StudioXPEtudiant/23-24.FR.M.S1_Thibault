@@ -22,7 +22,7 @@ public class CursorChanger : MonoBehaviour
         if (collider.CompareTag(tagEnemy))
         {
             cursorManager.SetCursorRed();
-        } 
+        }
         else if (collider.CompareTag(tagPnj))
         {
             cursorManager.SetCursorYellow();
