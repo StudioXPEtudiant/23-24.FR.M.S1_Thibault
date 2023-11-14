@@ -5,7 +5,7 @@ using UnityEngine;
 public class CursorChanger : MonoBehaviour
 {
     [Header("Cursor System")]
-    [SerializeField] private CursorManager cursorManager;
+    public CursorManager cursorManager;
     private Collider2D collider;
 
     [Header("Tags Names")] 

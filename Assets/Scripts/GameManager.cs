@@ -25,10 +25,7 @@ public class GameManager : MonoBehaviour
     [Header("Game Settings")]
     public bool gameOn;
 
-    private void Awake()
-    {
-        
-    }
+    [Header("Cursor Aim On")] public bool cursorOnEnemy;
 
     private void Start()
     {

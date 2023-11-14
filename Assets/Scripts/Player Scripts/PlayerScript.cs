@@ -13,6 +13,7 @@ public class PlayerScript : MonoBehaviour
     public float climbSpeed = 10;
     public int minHealth = 0;
     public int maxHealth = 6;
+    public int damage = 1; 
     private int currentHealth;
     
     [Header("Behaviour")]
