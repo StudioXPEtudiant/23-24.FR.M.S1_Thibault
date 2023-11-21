@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(PlayerMotor))]
 [RequireComponent(typeof(PlayerController))]
@@ -21,6 +23,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private PlayerMotor playerMotor;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private PlayerUIScript playerUIScript;
+    
+    [Header("Attack Sys")]
+    [SerializeField] private GameObject attackAnimation; 
     
     void Start()
     {
@@ -47,6 +52,10 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             DecreaseHealth(1);
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            InstAttackAnimation();
         }
     }
 
@@ -89,5 +98,15 @@ public class PlayerScript : MonoBehaviour
         yield return new WaitForSeconds(_time);
         
         spriteRenderer.color = colorBeforeChange;
+    }
+
+    private void InstAttackAnimation()
+    {
+        Vector3 mousePosScreen = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
+        Vector3 mousePosWorldPoint = Camera.main.ScreenToWorldPoint(mousePosScreen);
+        
+         GameObject _attackTemp = Instantiate(attackAnimation, mousePosWorldPoint, Quaternion.identity);
+         
+         Destroy(_attackTemp, 0.2f);
     }
 }
