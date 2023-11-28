@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalCursor: {fileID: 2800000, guid: d673263d78ce47f488b74edbdd14b6f2, type: 3}
   onEnemyCursor: {fileID: 2800000, guid: 944eece0a3c26194d96c7c96dd48f94a, type: 3}
-  onPnjCursor: {fileID: 2800000, guid: f6c447868c4916746aba134404e3b985, type: 3}
+  onPnjCursor: {fileID: 2800000, guid: 51b5cb3f64e4576468dc49553c800be5, type: 3}
 --- !u!4 &126187981
 Transform:
   m_ObjectHideFlags: 0
@@ -391,6 +391,26 @@ PrefabInstance:
     - target: {fileID: 3610249590528153636, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
       propertyPath: m_Name
       value: E_GothicEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: velocity
+      value: 1e+10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: str_Direction
+      value: right
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652931083911869336, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: m_Constraints
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8009541812919940650, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38732,8 +38752,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 27
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

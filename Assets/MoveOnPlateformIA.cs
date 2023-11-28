@@ -8,13 +8,15 @@ using Random = UnityEngine.Random;
 public class MoveOnPlateformIA : MonoBehaviour
 {
     [Header("IA Capacitys")] 
-    [SerializeField] private float velocity;
-    [SerializeField] private float health;
+    [SerializeField] private float velocity = 10;
+    [SerializeField] private float health = 10;
 
     [Header("IA Parameters")]
-    [SerializeField] bool canDoPauseRandomly;
-    [SerializeField] private int pauseInterval;
-
+    [SerializeField] bool canDoPauseRandomly = false;
+    [SerializeField] private int pauseInterval = 0;
+    [SerializeField] private string str_Direction;
+    private int int_Direction = 1;
+    
     [Header("Colliders")] 
     [SerializeField] private Collider2D baseCollider;
     [SerializeField] private Collider2D middleCheckCollider;
@@ -28,29 +30,47 @@ public class MoveOnPlateformIA : MonoBehaviour
     [Header("Behaviours")] 
     [SerializeField] private Rigidbody2D rb2d;
 
-    private int direction;
-
     private void FixedUpdate()
     {
         IAMove();
+        
+        //if (CheckLeft())
+        {
+            int_Direction = 1;
+        }
+        // if (CheckRight())
+        {
+            int_Direction = -1;
+        }
     }
 
     private void Start()
     {
-        GenerateRandomDirection();
+        ConvertStrDirectionToIntDirection();
+    }
+
+    private void ConvertStrDirectionToIntDirection()
+    {
+        if (str_Direction == "right")
+        {
+            int_Direction = 1;
+        } else if (str_Direction == "left")
+        {
+            int_Direction = -1;
+        }
+        
+        Debug.Log("Str direction : " + int_Direction.ToString());
     }
 
     private void IAMove()
     {
-        rb2d.velocity = new Vector2(direction * velocity, rb2d.velocity.y);
-    }
+        Vector2 newVelo = new Vector2(int_Direction * velocity / 10, 0);
 
-    private void GenerateRandomDirection()
-    {
-        float floatDirection = Random.Range(0f, 0.1f);
+        rb2d.velocity = Vector2.ClampMagnitude(new Vector2(1,1), 10);
         
-        if (floatDirection == 0f) { direction = 1; }
-        else if (floatDirection == 0.1f) { direction = -1; }
+        rb2d.AddForce(newVelo);
+        
+        Debug.Log(rb2d.velocity);
     }
 
     private bool CheckLeft()
