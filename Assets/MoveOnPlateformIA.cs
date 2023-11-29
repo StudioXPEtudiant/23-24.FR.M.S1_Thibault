@@ -29,24 +29,29 @@ public class MoveOnPlateformIA : MonoBehaviour
 
     [Header("Behaviours")] 
     [SerializeField] private Rigidbody2D rb2d;
-
-    private void FixedUpdate()
-    {
-        IAMove();
-        
-        //if (CheckLeft())
-        {
-            int_Direction = 1;
-        }
-        // if (CheckRight())
-        {
-            int_Direction = -1;
-        }
-    }
+    [SerializeField] private Animator animator;
 
     private void Start()
     {
         ConvertStrDirectionToIntDirection();
+    }
+    
+    private void FixedUpdate()
+    {
+        IAMove();
+        
+        if (!CheckGrounded())
+        {
+            ChangeDirection();
+        }
+        
+        Debug.Log(leftCheckCollider.IsTouchingLayers(LayerMask.GetMask(groundLayerName)));
+        Debug.Log(rightCheckCollider.IsTouchingLayers(LayerMask.GetMask(groundLayerName)));
+    }
+
+    private bool CheckGrounded()
+    {
+        return rightCheckCollider.IsTouchingLayers(LayerMask.GetMask(groundLayerName)) || leftCheckCollider.IsTouchingLayers(LayerMask.GetMask(groundLayerName));
     }
 
     private void ConvertStrDirectionToIntDirection()
@@ -58,8 +63,6 @@ public class MoveOnPlateformIA : MonoBehaviour
         {
             int_Direction = -1;
         }
-        
-        Debug.Log("Str direction : " + int_Direction.ToString());
     }
 
     private void IAMove()
@@ -69,31 +72,10 @@ public class MoveOnPlateformIA : MonoBehaviour
         rb2d.velocity = Vector2.ClampMagnitude(new Vector2(1,1), 10);
         
         rb2d.AddForce(newVelo);
-        
-        Debug.Log(rb2d.velocity);
     }
 
-    private bool CheckLeft()
+    private void ChangeDirection()
     {
-        if (leftCheckCollider.IsTouchingLayers(LayerMask.GetMask(groundLayerName)))
-        {
-            return false;
-        }
-        else
-        {
-           return true; 
-        }
-    }
-    
-    private bool CheckRight()
-    {
-        if (rightCheckCollider.IsTouchingLayers(LayerMask.GetMask(groundLayerName)))
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
+        int_Direction *= -1;
+    } 
 }

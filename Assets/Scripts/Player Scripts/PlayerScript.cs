@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour
     public int minHealth = 0;
     public int maxHealth = 6;
     public int damage = 1; 
-    private int currentHealth;
+    public int currentHealth;
     
     [Header("Behaviour")]
     [SerializeField] private PlayerController playerController;
