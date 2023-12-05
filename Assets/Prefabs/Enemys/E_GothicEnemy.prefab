@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: 7299942071314454183}
   - component: {fileID: 833578310722651214}
   - component: {fileID: 1049917660065342551}
+  - component: {fileID: 2371221630154552193}
   m_Layer: 0
   m_Name: E_GothicEnemy
   m_TagString: Enemy
@@ -432,10 +433,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57056821b18c3d46b3a34c74a8a9f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 1
+  velocity: 5
   health: 5
   canDoPauseRandomly: 0
   pauseInterval: 0
+  str_Direction: right
   baseCollider: {fileID: 1766203555351255093}
   middleCheckCollider: {fileID: 6831168110269140163}
   leftCheckCollider: {fileID: 8110087102614857436}
@@ -457,6 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 10
   speed: 10
+  damage: 1
 --- !u!114 &833578310722651214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,6 +489,20 @@ MonoBehaviour:
   cursorManager: {fileID: 0}
   tagEnemy: Enemy
   tagPnj: PNJ
+--- !u!114 &2371221630154552193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3610249590528153636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79edd1688f51dc64bb63e56a783241fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyScript: {fileID: 7299942071314454183}
+  collider2D: {fileID: 1766203555351255093}
 --- !u!1 &4684964243557025100
 GameObject:
   m_ObjectHideFlags: 0

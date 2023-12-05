@@ -8,7 +8,6 @@ public class EnemyLifeSystem : MonoBehaviour
 {
     [SerializeField] private PlayerScript playerScript;   
     [SerializeField] private EnemyScript enemyScript;
-    private CursorChanger cursorChanger;
 
     private void Awake()
     {
@@ -19,10 +18,6 @@ public class EnemyLifeSystem : MonoBehaviour
         if (!playerScript)
         {
             Debug.Log("playerScript missing");
-        }
-        if (!cursorChanger)
-        {
-            cursorChanger = GetComponent<CursorChanger>();
         }
     }
 
@@ -39,14 +34,7 @@ public class EnemyLifeSystem : MonoBehaviour
     {
         if (enemyScript.life <= 0)
         {
-            Die();
+            enemyScript.Die();
         }
-    }
-
-    private void Die()
-    {
-        Destroy(gameObject);
-        
-        cursorChanger.cursorManager.SetCursorDefault();
     }
 }

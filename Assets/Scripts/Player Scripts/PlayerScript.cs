@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour
     public int minHealth = 0;
     public int maxHealth = 6;
     public int damage = 1; 
-    private int currentHealth;
+    public int currentHealth;
     
     [Header("Behaviour")]
     [SerializeField] private PlayerController playerController;
@@ -102,11 +102,11 @@ public class PlayerScript : MonoBehaviour
 
     private void InstAttackAnimation()
     {
-        Vector3 mousePosScreen = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
+        Vector3 mousePosScreen = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
         Vector3 mousePosWorldPoint = Camera.main.ScreenToWorldPoint(mousePosScreen);
         
-         GameObject _attackTemp = Instantiate(attackAnimation, mousePosWorldPoint, Quaternion.identity);
+        GameObject _attackTemp = Instantiate(attackAnimation, mousePosWorldPoint, Quaternion.identity);
          
-         Destroy(_attackTemp, 0.2f);
+        Destroy(_attackTemp, 0.2f);
     }
 }
