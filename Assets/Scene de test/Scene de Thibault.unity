@@ -394,10 +394,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: E_GothicEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 780552045}
+    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: str_Direction
+      value: left
+      objectReference: {fileID: 0}
     - target: {fileID: 7299942071314454183, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
       propertyPath: explosionParticle
       value: 
       objectReference: {fileID: 6332894085322709146, guid: 142c52d18078c9b498526942b295a43a, type: 3}
+    - target: {fileID: 7652931083911869336, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8009541812919940650, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.3034
@@ -28315,6 +28327,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24488850f98da9743b0e437116efdfc1, type: 3}
+--- !u!95 &780552045 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2228075167423733234, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+  m_PrefabInstance: {fileID: 197782495}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &782733091
 GameObject:
   m_ObjectHideFlags: 0
