@@ -399,8 +399,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 780552045}
     - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: velocity
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
       propertyPath: str_Direction
-      value: left
+      value: right
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: canDoPauseRandomly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+      propertyPath: groundLayerName.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7299942071314454183, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
       propertyPath: explosionParticle
@@ -451,7 +463,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1044819806928221969, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+    - {fileID: 1100563667169597501, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+    - {fileID: 2509500438320186053, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
