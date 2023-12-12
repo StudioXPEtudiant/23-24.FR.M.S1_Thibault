@@ -15,7 +15,7 @@ public class MoveOnPlateformIA : MonoBehaviour
     [SerializeField] bool canDoPauseRandomly = false;
     [SerializeField] private int pauseInterval = 0;
     [SerializeField] private string str_Direction;
-    private int int_Direction = 1;
+    private int int_Direction = -1;
     
     [Header("Colliders")] 
     [SerializeField] private Collider2D baseCollider;
@@ -30,7 +30,10 @@ public class MoveOnPlateformIA : MonoBehaviour
     [Header("Behaviours")] 
     [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private Animator animator;
-
+    
+    
+    int tempValue = 0;
+    
     private void Start()
     {
         ConvertStrDirectionToIntDirection();
@@ -44,9 +47,6 @@ public class MoveOnPlateformIA : MonoBehaviour
         {
             ChangeDirection();
         }
-        
-        Debug.Log(leftCheckCollider.IsTouchingLayers(LayerMask.GetMask(groundLayerName)));
-        Debug.Log(rightCheckCollider.IsTouchingLayers(LayerMask.GetMask(groundLayerName)));
     }
 
     private bool CheckGrounded()
@@ -68,14 +68,36 @@ public class MoveOnPlateformIA : MonoBehaviour
     private void IAMove()
     {
         Vector2 newVelo = new Vector2(int_Direction * velocity / 10, 0);
-
-        rb2d.velocity = Vector2.ClampMagnitude(new Vector2(1,1), 10);
         
         rb2d.AddForce(newVelo);
+        
+        rb2d.velocity = Vector2.ClampMagnitude(rb2d.velocity,10);
+        
+        SetMoveAnimatorParameter();
+    }
+
+    private void SetMoveAnimatorParameter()
+    {
+        float tempVelo = rb2d.velocity.x;
+
+        if (tempVelo > 0.1f)
+        {
+            tempValue = 1;
+        } else if (tempVelo <= -0.1f)
+        {
+            tempValue = -1;
+        } else
+        {
+            tempValue = 0;
+        }
+        
+        animator.SetInteger("Move Direction", tempValue);
+        
+        Debug.Log("tempValue : " + tempValue);
     }
 
     private void ChangeDirection()
     {
         int_Direction *= -1;
-    } 
+    }
 }
