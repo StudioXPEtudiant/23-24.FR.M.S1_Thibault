@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -19,12 +20,9 @@ public class MoveOnPlateformIA : MonoBehaviour
     
     [Header("Colliders")] 
     [SerializeField] private Collider2D baseCollider;
-    [SerializeField] private Collider2D middleCheckCollider;
-    [SerializeField] private Collider2D leftCheckCollider;
-    [SerializeField] private Collider2D rightCheckCollider;
     
     [Header("Layers / Tags")]
-    [SerializeField] private string groundLayerName;
+    [SerializeField] private LayerMask groundLayerName;
     [SerializeField] private string playerTagName;
 
     [Header("Behaviours")] 
@@ -42,16 +40,25 @@ public class MoveOnPlateformIA : MonoBehaviour
     private void FixedUpdate()
     {
         IAMove();
-        
-        if (!CheckGrounded())
-        {
-            ChangeDirection();
-        }
+
+        CheckIfGrounded();
     }
 
-    private bool CheckGrounded()
+    private void CheckIfGrounded()
     {
-        return rightCheckCollider.IsTouchingLayers(LayerMask.GetMask(groundLayerName)) || leftCheckCollider.IsTouchingLayers(LayerMask.GetMask(groundLayerName));
+        Vector2 raycastOrigin = transform.position; // Position de départ du rayon (centre du GameObject)
+        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, Mathf.Infinity, groundLayerName); // Lancer le rayon vers le bas
+
+        if (!hit.collider)
+        {
+            Debug.Log("Le sol n'est pas touché");
+            ChangeDirection();
+        }
+        else
+        {
+            Debug.Log("Le sol est touché");
+            ChangeDirection();
+        }
     }
 
     private void ConvertStrDirectionToIntDirection()
@@ -67,33 +74,37 @@ public class MoveOnPlateformIA : MonoBehaviour
 
     private void IAMove()
     {
-        Vector2 newVelo = new Vector2(int_Direction * velocity / 10, 0);
-        
-        rb2d.AddForce(newVelo);
-        
-        rb2d.velocity = Vector2.ClampMagnitude(rb2d.velocity,10);
-        
         SetMoveAnimatorParameter();
+        
+        // Vector2 newVelo = new Vector2(int_Direction * velocity, 0);
+        
+        rb2d.AddForce(new Vector2(int_Direction * velocity, 0));
+        
+        rb2d.velocity = Vector2.ClampMagnitude(rb2d.velocity,velocity);
+        
+        Debug.Log("Velocity : " + rb2d.velocity);
     }
 
     private void SetMoveAnimatorParameter()
     {
         float tempVelo = rb2d.velocity.x;
-
+        
         if (tempVelo > 0.1f)
         {
-            tempValue = 1;
-        } else if (tempVelo <= -0.1f)
+            
+        } else if (tempVelo < -0.1f)
         {
-            tempValue = -1;
+            
         } else
         {
-            tempValue = 0;
+            
         }
         
         animator.SetInteger("Move Direction", tempValue);
+
+        Vector2 tempsVeloVector = new Vector2(tempVelo, 0).normalized;
         
-        Debug.Log("tempValue : " + tempValue);
+        Debug.Log("tempVelo" + tempsVeloVector);
     }
 
     private void ChangeDirection()

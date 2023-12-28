@@ -17,7 +17,7 @@ public class EnemyLifeSystem : MonoBehaviour
         }
         if (!playerScript)
         {
-            Debug.Log("playerScript missing");
+            Debug.LogError("PlayerScript missing");
         }
     }
 
