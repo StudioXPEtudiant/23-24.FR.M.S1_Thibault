@@ -74,7 +74,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   player: {fileID: 6767798269241248053}
-  _rb2d: {fileID: 6385753280363119489}
+  rb2d: {fileID: 0}
   animator: {fileID: 2412559295750978106}
   ladderScript: {fileID: 7434821500423246236}
 --- !u!114 &6767798269241248053
@@ -95,6 +95,7 @@ MonoBehaviour:
   minHealth: 0
   maxHealth: 6
   damage: 1
+  currentHealth: 0
   playerController: {fileID: 2953368738845569753}
   playerMotor: {fileID: 4219617807476884216}
   spriteRenderer: {fileID: 6804202080033318495}

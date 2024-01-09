@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour
     [Header("Behaviour")]
     [SerializeField] private PlayerController playerController;
     [SerializeField] private PlayerMotor playerMotor;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] public SpriteRenderer spriteRenderer;
     [SerializeField] private PlayerUIScript playerUIScript;
     
     [Header("Attack Sys")]

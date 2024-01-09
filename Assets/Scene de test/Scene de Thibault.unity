@@ -39246,6 +39246,14 @@ PrefabInstance:
       propertyPath: playerUIScript
       value: 
       objectReference: {fileID: 1088824543}
+    - target: {fileID: 6804202080033318495, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804202080033318495, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7689660235066492063, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.803
