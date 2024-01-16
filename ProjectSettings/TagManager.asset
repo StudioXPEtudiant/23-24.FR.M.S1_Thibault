@@ -15,9 +15,9 @@ TagManager:
   - UI
   - Ladder
   - Ground
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Player Enmy collider
   - 
   - 
   - 

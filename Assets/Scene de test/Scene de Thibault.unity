@@ -394,34 +394,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: E_GothicEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 780552045}
-    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
-      propertyPath: velocity
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
-      propertyPath: str_Direction
-      value: right
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
-      propertyPath: canDoPauseRandomly
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919842453050456311, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
-      propertyPath: groundLayerName.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
-    - target: {fileID: 7299942071314454183, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
-      propertyPath: explosionParticle
-      value: 
-      objectReference: {fileID: 6332894085322709146, guid: 142c52d18078c9b498526942b295a43a, type: 3}
-    - target: {fileID: 7652931083911869336, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8009541812919940650, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.3034
@@ -463,10 +435,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1044819806928221969, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
-    - {fileID: 1100563667169597501, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
-    - {fileID: 2509500438320186053, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
@@ -590,6 +559,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!70 &334890055 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4151089775910113345, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+  m_PrefabInstance: {fileID: 4491379580687893085}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &426263577
 GameObject:
   m_ObjectHideFlags: 0
@@ -28342,11 +28316,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24488850f98da9743b0e437116efdfc1, type: 3}
---- !u!95 &780552045 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2228075167423733234, guid: 089679f8e92de4a45a184902375b64fb, type: 3}
-  m_PrefabInstance: {fileID: 197782495}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &782733091
 GameObject:
   m_ObjectHideFlags: 0
@@ -31485,6 +31454,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 933165312456551787, guid: f14ad30c51a44524ba9b90bfd65eae4f, type: 3}
   m_PrefabInstance: {fileID: 612429843}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1210585785 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4339598764965608284, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+  m_PrefabInstance: {fileID: 4491379580687893085}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1463904344
 GameObject:
   m_ObjectHideFlags: 0
@@ -31539,6 +31513,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 933165312456551787, guid: f14ad30c51a44524ba9b90bfd65eae4f, type: 3}
   m_PrefabInstance: {fileID: 5959881879104211503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &1632895635 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1578516805133003179, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+  m_PrefabInstance: {fileID: 4491379580687893085}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1647009869
 GameObject:
@@ -39029,6 +39008,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOn: 0
   cursorOnEnemy: 0
+--- !u!70 &1904025173 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4662355191472342053, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+  m_PrefabInstance: {fileID: 4491379580687893085}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1943333828
 GameObject:
   m_ObjectHideFlags: 0
@@ -39242,18 +39226,58 @@ PrefabInstance:
       propertyPath: playerUIScript
       value: 
       objectReference: {fileID: 1088824543}
+    - target: {fileID: 4568334685813416974, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: m_Name
+      value: Enemy Collider Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568334685813416974, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641859444082246135, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: m_Name
+      value: Basic Collider Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641859444082246135, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6767798269241248053, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
       propertyPath: playerUIScript
       value: 
       objectReference: {fileID: 1088824543}
-    - target: {fileID: 6804202080033318495, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6804202080033318495, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 6767798269241248053, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: enemy_CC2D_Vertical
+      value: 
+      objectReference: {fileID: 1632895635}
+    - target: {fileID: 6767798269241248053, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: cenemy_CC2D_Horizontal
+      value: 
+      objectReference: {fileID: 334890055}
+    - target: {fileID: 6767798269241248053, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: capsuleCollider2D_Vertical
+      value: 
+      objectReference: {fileID: 1632895635}
+    - target: {fileID: 6767798269241248053, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: capsuleCollider2D_Horizontal
+      value: 
+      objectReference: {fileID: 334890055}
+    - target: {fileID: 7434821500423246236, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: basique_CC2D_Vertical
+      value: 
+      objectReference: {fileID: 1210585785}
+    - target: {fileID: 7434821500423246236, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: basique_CC2D_Horizontal
+      value: 
+      objectReference: {fileID: 1904025173}
+    - target: {fileID: 7434821500423246236, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: capsuleCollider2D_Vertical
+      value: 
+      objectReference: {fileID: 1210585785}
+    - target: {fileID: 7434821500423246236, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: capsuleCollider2D_Horizontal
+      value: 
+      objectReference: {fileID: 1904025173}
     - target: {fileID: 7689660235066492063, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.803
@@ -39293,6 +39317,22 @@ PrefabInstance:
     - target: {fileID: 7689660235066492063, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8310954422981644036, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: m_Name
+      value: Basic collider Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8310954422981644036, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808680602526495873, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: m_Name
+      value: Enemy Collider Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808680602526495873, guid: 897d48adf6f60aa4b830aebbaccafdbe, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

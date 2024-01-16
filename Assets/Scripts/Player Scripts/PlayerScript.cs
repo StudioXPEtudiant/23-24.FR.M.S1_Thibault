@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -23,6 +24,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private PlayerMotor playerMotor;
     [SerializeField] public SpriteRenderer spriteRenderer;
     [SerializeField] private PlayerUIScript playerUIScript;
+    [SerializeField] private CapsuleCollider2D enemy_CC2D_Vertical;
+    [SerializeField] private CapsuleCollider2D cenemy_CC2D_Horizontal;
     
     [Header("Attack Sys")]
     [SerializeField] private GameObject attackAnimation; 
@@ -57,6 +60,23 @@ public class PlayerScript : MonoBehaviour
         {
             InstAttackAnimation();
         }
+        if (Input.GetKey(KeyCode.P))
+        {
+            StartCoroutine(ReceiveHit());
+        }
+    }
+
+    public IEnumerator ReceiveHit()
+    {
+        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0.5f);
+        enemy_CC2D_Vertical.enabled = false;
+        cenemy_CC2D_Horizontal.enabled = false;
+        
+        yield return new WaitForSeconds(3);
+        
+        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+        enemy_CC2D_Vertical.enabled = true;
+        cenemy_CC2D_Horizontal.enabled = true;
     }
 
     public void IncreaseHeath(int value)
