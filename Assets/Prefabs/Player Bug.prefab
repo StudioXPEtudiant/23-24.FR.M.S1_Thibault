@@ -100,8 +100,8 @@ MonoBehaviour:
   playerMotor: {fileID: 4219617807476884216}
   spriteRenderer: {fileID: 6804202080033318495}
   playerUIScript: {fileID: 0}
-  capsuleCollider2D_Vertical: {fileID: 4339598764965608284}
-  capsuleCollider2D_Horizontal: {fileID: 4662355191472342053}
+  enemy_CC2D_Vertical: {fileID: 1578516805133003179}
+  cenemy_CC2D_Horizontal: {fileID: 4151089775910113345}
   attackAnimation: {fileID: 6760112006183429014, guid: c3469a6797408454c9079c10975be67a, type: 3}
 --- !u!114 &7434821500423246236
 MonoBehaviour:
@@ -118,8 +118,8 @@ MonoBehaviour:
   onLadder: 0
   animatorClimbParameterName: Climbing
   ladderLayerName: Ladder
-  capsuleCollider2D_Vertical: {fileID: 4339598764965608284}
-  capsuleCollider2D_Horizontal: {fileID: 4662355191472342053}
+  basique_CC2D_Vertical: {fileID: 4339598764965608284}
+  basique_CC2D_Horizontal: {fileID: 4662355191472342053}
   animator: {fileID: 2412559295750978106}
   motor: {fileID: 4219617807476884216}
   player: {fileID: 6767798269241248053}
@@ -194,8 +194,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7812696087232202588}
   - component: {fileID: 4151089775910113345}
+  - component: {fileID: 1504652949228649009}
   m_Layer: 10
-  m_Name: Collider Horizontal Plateform
+  m_Name: Enemy Collider Horizontal
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,6 +252,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0.005013915, y: -0.25332934}
   m_Size: {x: 0.8626499, y: 0.3910655}
   m_Direction: 1
+--- !u!114 &1504652949228649009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4568334685813416974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d228d277afd1dc439183c5af9a68d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy_CC2D: {fileID: 4151089775910113345}
+  playerScript: {fileID: 6767798269241248053}
 --- !u!1 &4641859444082246135
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +277,7 @@ GameObject:
   - component: {fileID: 6607248844077859742}
   - component: {fileID: 4339598764965608284}
   m_Layer: 8
-  m_Name: Collider Vertical Enemy
+  m_Name: Basic Collider Vertical
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,7 +584,7 @@ GameObject:
   - component: {fileID: 6365628246967104551}
   - component: {fileID: 4662355191472342053}
   m_Layer: 8
-  m_Name: Collider Horizontal Enemy
+  m_Name: Basic collider Horizontal
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -635,8 +650,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1628625451320341430}
   - component: {fileID: 1578516805133003179}
+  - component: {fileID: 7254400819897915272}
   m_Layer: 10
-  m_Name: Collider Vertical Plateform
+  m_Name: Enemy Collider Vertical
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -692,3 +708,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0009462237, y: -0.01945906}
   m_Size: {x: 0.3922933, y: 0.6083833}
   m_Direction: 0
+--- !u!114 &7254400819897915272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8808680602526495873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d228d277afd1dc439183c5af9a68d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy_CC2D: {fileID: 1578516805133003179}
+  playerScript: {fileID: 6767798269241248053}
