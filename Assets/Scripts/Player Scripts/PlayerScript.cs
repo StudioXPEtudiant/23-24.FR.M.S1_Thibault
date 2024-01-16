@@ -60,14 +60,14 @@ public class PlayerScript : MonoBehaviour
         {
             InstAttackAnimation();
         }
-        if (Input.GetKey(KeyCode.P))
-        {
-            StartCoroutine(ReceiveHit());
-        }
+        
+        Debug.Log("Player Health = " + currentHealth);
     }
 
-    public IEnumerator ReceiveHit()
+    public IEnumerator ReceiveHit(EnemyScript enemyScript)
     {
+        currentHealth -= enemyScript.damage;
+        
         spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0.5f);
         enemy_CC2D_Vertical.enabled = false;
         cenemy_CC2D_Horizontal.enabled = false;
