@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PNJ
   - Enemy
+  - InteractUI
   layers:
   - Default
   - TransparentFX
