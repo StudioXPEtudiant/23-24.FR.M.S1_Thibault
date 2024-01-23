@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PNJ
   - Enemy
+  - InteractUI
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,9 @@ TagManager:
   - UI
   - Ladder
   - Ground
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Player Enmy collider
   - 
   - 
   - 

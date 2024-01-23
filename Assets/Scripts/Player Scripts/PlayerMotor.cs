@@ -22,9 +22,9 @@ public class PlayerMotor : MonoBehaviour
     
     [Header("Behaviours")]
     [SerializeField] private PlayerScript player;
-    [SerializeField] private Rigidbody2D _rb2d;
+    [SerializeField] private Rigidbody2D rb2d;
     [SerializeField] private Animator animator;
-    [SerializeField] private LadderScript ladderScript; 
+    [SerializeField] private LadderScript ladderScript;
 
     
 
@@ -35,7 +35,7 @@ public class PlayerMotor : MonoBehaviour
 
     private void InitAllVars()
     {
-        if (!_rb2d) {_rb2d = GetComponent<Rigidbody2D>();}
+        if (!rb2d) {rb2d = GetComponent<Rigidbody2D>();}
     
         if (!player) {player = GetComponent<PlayerScript>();}
 
@@ -44,7 +44,7 @@ public class PlayerMotor : MonoBehaviour
         if (!ladderScript) {ladderScript = GetComponent<LadderScript>();}
         
         if (!animator) {Debug.LogError("Animator of player missing");}
-
+        
         currentJumpCount = maxJump;
     }
     
@@ -52,9 +52,11 @@ public class PlayerMotor : MonoBehaviour
     {
         // Stocke les inputs du joueur dans des variables
         horizontalInput = Input.GetAxis("Horizontal");
+        float AbsHorizontalInput = Mathf.Abs(horizontalInput);
+        
         verticalInput = Input.GetAxis("Vertical");
         
-        SetAnimationFloat(animatorMoveHorizontalParameterName, horizontalInput);
+        SetAnimationFloat(animatorMoveHorizontalParameterName, AbsHorizontalInput);
         SetAnimationFloat(animatorMoveVerticalParameterName ,verticalInput);
 
         if (!ladderScript.onLadder)
@@ -76,11 +78,13 @@ public class PlayerMotor : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        
+        Flip(rb2d.velocity.x);
     }
 
     private void Move()
     {
-        _rb2d.velocity = new Vector2(horizontalInput * player.velocity, _rb2d.velocity.y);
+        rb2d.velocity = new Vector2(horizontalInput * player.velocity, rb2d.velocity.y);
     }
 
     private void Jump()
@@ -89,7 +93,7 @@ public class PlayerMotor : MonoBehaviour
         
         if (isOnGround)
         {
-            _rb2d.velocity = new Vector2(_rb2d.velocity.x, player.jumpForce);
+            rb2d.velocity = new Vector2(rb2d.velocity.x, player.jumpForce);
 
             currentJumpCount -= 1;
             
@@ -97,7 +101,7 @@ public class PlayerMotor : MonoBehaviour
         }
         else if (!isOnGround && currentJumpCount >= 1)
         {
-            _rb2d.velocity = new Vector2(_rb2d.velocity.x, player.jumpForce);
+            rb2d.velocity = new Vector2(rb2d.velocity.x, player.jumpForce);
             
             currentJumpCount -= 1;
         }
@@ -106,7 +110,16 @@ public class PlayerMotor : MonoBehaviour
     public void RefreshCurrentJumpCount()
     {
         currentJumpCount = maxJump;
-        
-        Debug.Log("CurrentJump Refreshing...");
+    }
+    
+    private void Flip(float _velocity)
+    {
+        if (_velocity > 0.1f)
+        {
+            player.spriteRenderer.flipX = false;
+        }else if (_velocity < -0.1f)
+        {
+            player.spriteRenderer.flipX = true;
+        }
     }
 }
