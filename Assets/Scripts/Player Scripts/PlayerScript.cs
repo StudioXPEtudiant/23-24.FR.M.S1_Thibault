@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
     public float velocity = 10;
     public float jumpForce = 1;
     public float climbSpeed = 10;
-    public int minHealth = 0;
+    public int minHealth;
     public int maxHealth = 6;
     public int damage = 1; 
     public int currentHealth;
@@ -27,8 +27,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private CapsuleCollider2D enemy_CC2D_Vertical;
     [SerializeField] private CapsuleCollider2D cenemy_CC2D_Horizontal;
     
-    [Header("Attack Sys")]
+    [Header("Annimation")]
     [SerializeField] private GameObject attackAnimation; 
+    [SerializeField] private GameObject deathAnimation; 
     
     void Start()
     {
@@ -95,7 +96,13 @@ public class PlayerScript : MonoBehaviour
             currentHealth -= value;
 
             SendHealthValueToUI();
-        } else {Debug.Log("Min Health Reched");}
+        }
+        else
+        {
+            Debug.Log("Min Health Reched");
+
+            Die();
+        }
     } 
     private void SetMaxHealth()
     {
@@ -128,5 +135,17 @@ public class PlayerScript : MonoBehaviour
         GameObject _attackTemp = Instantiate(attackAnimation, mousePosWorldPoint, Quaternion.identity);
          
         Destroy(_attackTemp, 0.2f);
+    }
+
+    private void Die()
+    {
+        InstDeathAnimation();
+    }
+    
+    private void InstDeathAnimation()
+    {
+        GameObject _dieAnim = Instantiate(deathAnimation, transform.position, Quaternion.identity);
+         
+        Destroy(_dieAnim, 2);
     }
 }

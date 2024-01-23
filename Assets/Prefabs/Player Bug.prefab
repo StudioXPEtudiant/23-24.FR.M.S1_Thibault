@@ -103,6 +103,7 @@ MonoBehaviour:
   enemy_CC2D_Vertical: {fileID: 1578516805133003179}
   cenemy_CC2D_Horizontal: {fileID: 4151089775910113345}
   attackAnimation: {fileID: 6760112006183429014, guid: c3469a6797408454c9079c10975be67a, type: 3}
+  deathAnimation: {fileID: 7747524223694086851, guid: 2789b1d11bd21eb4eae239856bd6fb50, type: 3}
 --- !u!114 &7434821500423246236
 MonoBehaviour:
   m_ObjectHideFlags: 0
