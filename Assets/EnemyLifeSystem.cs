@@ -37,4 +37,5 @@ public class EnemyLifeSystem : MonoBehaviour
             enemyScript.Die();
         }
     }
+
 }
