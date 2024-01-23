@@ -51,12 +51,10 @@ public class MoveOnPlateformIA : MonoBehaviour
 
         if (!hit.collider)
         {
-            Debug.Log("Le sol n'est pas touché");
             ChangeDirection();
         }
         else
         {
-            Debug.Log("Le sol est touché");
             ChangeDirection();
         }
     }
@@ -81,30 +79,15 @@ public class MoveOnPlateformIA : MonoBehaviour
         rb2d.AddForce(new Vector2(int_Direction * velocity, 0));
         
         rb2d.velocity = Vector2.ClampMagnitude(rb2d.velocity,velocity);
-        
-        Debug.Log("Velocity : " + rb2d.velocity);
     }
 
     private void SetMoveAnimatorParameter()
     {
         float tempVelo = rb2d.velocity.x;
         
-        if (tempVelo > 0.1f)
-        {
-            
-        } else if (tempVelo < -0.1f)
-        {
-            
-        } else
-        {
-            
-        }
-        
         animator.SetInteger("Move Direction", tempValue);
 
         Vector2 tempsVeloVector = new Vector2(tempVelo, 0).normalized;
-        
-        Debug.Log("tempVelo" + tempsVeloVector);
     }
 
     private void ChangeDirection()

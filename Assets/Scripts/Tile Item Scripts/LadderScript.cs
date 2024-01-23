@@ -16,8 +16,8 @@ public class LadderScript : MonoBehaviour
     [SerializeField] private string ladderLayerName;
     
     [Header("Component")] 
-    [SerializeField] private CapsuleCollider2D capsuleCollider2D_Vertical;
-    [SerializeField] private CapsuleCollider2D capsuleCollider2D_Horizontal;
+    [SerializeField] private CapsuleCollider2D basique_CC2D_Vertical;
+    [SerializeField] private CapsuleCollider2D basique_CC2D_Horizontal;
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerMotor motor;
     
@@ -72,13 +72,13 @@ public class LadderScript : MonoBehaviour
     {
         if (value)
         {
-            capsuleCollider2D_Vertical.enabled = true;
-            capsuleCollider2D_Horizontal.enabled = false;
+            basique_CC2D_Vertical.enabled = true;
+            basique_CC2D_Horizontal.enabled = false;
         }
-        else if (!value)
+        else
         {
-            capsuleCollider2D_Horizontal.enabled = true;
-            capsuleCollider2D_Vertical.enabled = false;
+            basique_CC2D_Horizontal.enabled = true;
+            basique_CC2D_Vertical.enabled = false;
         }
     }
 }

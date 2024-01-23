@@ -110,19 +110,15 @@ public class PlayerMotor : MonoBehaviour
     public void RefreshCurrentJumpCount()
     {
         currentJumpCount = maxJump;
-        
-        Debug.Log("CurrentJump Refreshing...");
     }
     
     private void Flip(float _velocity)
     {
         if (_velocity > 0.1f)
         {
-            Debug.Log("FLIP X = FALSE");
             player.spriteRenderer.flipX = false;
         }else if (_velocity < -0.1f)
         {
-            Debug.Log("FLIP X = TRUEEE");
             player.spriteRenderer.flipX = true;
         }
     }
